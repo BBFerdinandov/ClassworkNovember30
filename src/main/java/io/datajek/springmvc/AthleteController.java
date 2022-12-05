@@ -5,8 +5,10 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.sql.SQLOutput;
 
-    @Controller
+
+@Controller
     @RequestMapping("/player")
     public class AthleteController {
         @RequestMapping("/showPlayerForm")
@@ -18,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
         public static String processForm(@ModelAttribute("athlete") Athlete myAthlete) {
 
             //if(result.hasErrors())
+            //System.out.println("Binding result: " + result);
                return "add-player-form";
            //else
             //return "player-confirmation";
