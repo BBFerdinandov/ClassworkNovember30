@@ -2,7 +2,14 @@ package io.datajek.springmvc;
 
 import org.springframework.web.bind.annotation.InitBinder;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+
 public class Athlete {
+   //@NotNull(message="This is a required field.")
+    @Min(value=1, message="Value must be greater than or equal to 1.")
+    @Max(value=100, message="Value must be less than or equal to 100")
+    private Integer rank;
     private String firstName;
     //@NotNull(message="This is a required field.")
     //@Size(min=1, message = "This is a required field.")
