@@ -1,7 +1,7 @@
 package io.datajek.springmvc;
-
 import ch.qos.logback.core.model.Model;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -16,6 +16,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
         }
         @RequestMapping("/processPlayerForm")
         public static String processForm(@ModelAttribute("athlete") Athlete myAthlete) {
-            return "player-confirmation";
+
+            //if(result.hasErrors())
+               return "add-player-form";
+           //else
+            //return "player-confirmation";
         }
     }
